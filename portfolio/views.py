@@ -7,8 +7,8 @@ def index(request):
     return render(request, "index.html")
 
 
-def About(request):
-    return render(request, "about.html")
+def experience(request):
+    return render(request, "experience.html")
 
 
 def certification(request):
