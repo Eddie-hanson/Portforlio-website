@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.contrib.staticfiles.storage import staticfiles_storage
 
 # Create your views here.
 
@@ -8,7 +10,28 @@ def index(request):
 
 
 def experience(request):
-    return render(request, "experience.html")
+    experience = [{
+        'Company': 'Globe ICT',
+        'Role': 'Network Engineer',
+        'Duration': '2 years',
+    },
+        {
+        'Company': 'SoftNet',
+        'Role': 'Software Engineer',
+        'Duration': '4 Months',
+    },
+        {
+        'Company': 'Activo',
+        'Role': 'Junior Backend Engineer',
+        'Duration': '6 months',
+    },
+        {
+        'Company': 'Hive ICT',
+        'Role': 'Backend Engineer (Intern)',
+        'Duration': ' 15 weeks',
+    },
+    ]
+    return render(request, "experience.html", {'experiences': experience})
 
 
 def certification(request):
@@ -49,3 +72,17 @@ def projects(request):
          'image': 'assests/iss.png'},
     ]
     return render(request, "projects.html", {"projects": project_show})
+
+
+def resume(request):
+    resume_path = "myapp/resume.pdf"
+    resume_path = staticfiles_storage.path(resume_path)
+    if staticfiles_storage.exists(resume_path):
+        with open(resume_path, 'rb') as resume_file:
+            response = HttpResponse(
+                resume_file.read(), content_type="application/pdf")
+            response["Content-Disposition"] = 'attachment'
+            filename = 'resume'
+            return response
+    else:
+        return HttpResponse('Resume not found')

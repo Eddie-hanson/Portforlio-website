@@ -1,8 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-  About
+  Experience
 {% endblock title %}
 {% block content %}
 
+ <ul class="tilesWrap">
+  {% for experience in experiences %}
+	<li class="tilesWrap-list">
+		<h3 class="tilesWrap-h3">{{experience.Company}}</h3>
+		<p class="tilesWrap-p">
+			{{experience.Role}}
+		</p>
+			<p class="tilesWrap-years">{{experience.Duration}}</p >
+	</li>
+  {% endfor %}
+	{% comment %} <li class="tilesWrap-list">
+		<h2 class="tilesWrap-h2">02</h2>
+		<h3 class="tilesWrap-h3">Title 2</h3>
+		<p class="tilesWrap-p">
+			When an unknown printer took a galley of type and scrambled it to make 
+			a type specimen book. It has survived not only five centuries.
+		</p>
+		<p class="tilesWrap-years">Read more</p >
+	</li>
+	<li class="tilesWrap-list">
+		<h2 class="tilesWrap-h2">03</h2>
+		<h3 class="tilesWrap-h3">Title 3</h3>
+		<p class="tilesWrap-p">
+			But also the leap into electronic typesetting, remaining essentially
+			unchanged. It was popularised in the 1960s.
+		</p>
+				<p class="tilesWrap-years">Read more</p >
+	</li>
+	<li class="tilesWrap-list">
+		<h2 class="tilesWrap-h2">04</h2>
+		<h3 class="tilesWrap-h3">Title 4</h3>
+		<p class="tilesWrap-p">
+			With the release of Letraset sheets containing Lorem Ipsum passages,
+			and more recently with desktop publishing software like Aldus PageMaker 
+			including versions of Lorem Ipsum.
+		</p>
+				<p class="tilesWrap-years">Read more</p >
+	</li> {% endcomment %}
+</ul>
 {% endblock content %}

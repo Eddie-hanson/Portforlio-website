@@ -60,7 +60,7 @@
                 <a class="nav-link" href="{% url "contact" %}">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Resume</a>
+                <a class="nav-link" href="{% url "resume" %}">Resume</a>
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@
           <div class="cta d-block d-md-flex align-items-center px-5">
             <div>
               <h2 class="mb-0">Ready for a Collaboration !!!</h2>
-              <h3 class="text-dark">Let's get started!</h3>
+              {% comment %} <h3 class="text-dark">Let's get started!</h3> {% endcomment %}
             </div>
             <div class="ml-auto">
               <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact me</a>
