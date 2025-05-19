@@ -10,67 +10,22 @@
         <h2>
             Discover Our <span class="text-danger">Top</span>Dishes
         </h2>
+        
         <div class="row card-dishes">
+            {% for project in projects %}
             <div class="col-md-4 col-sm-6 mb-grid-gutter">
                 <a class="card border-0 shadow" href="food-delivery-category.html">
                     <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
+                         src="{% static project.image %}"
                          alt="Food Name" />
                     <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
+                        <h3 class="h5 mt-1">{{project.title}}</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 mb-grid-gutter">
-                <a class="card border-0 shadow" href="food-delivery-category.html">
-                    <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
-                         alt="Food Name" />
-                    <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-grid-gutter">
-                <a class="card border-0 shadow" href="food-delivery-category.html">
-                    <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
-                         alt="Food Name" />
-                    <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-grid-gutter">
-                <a class="card border-0 shadow" href="food-delivery-category.html">
-                    <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
-                         alt="Food Name" />
-                    <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-grid-gutter">
-                <a class="card border-0 shadow" href="food-delivery-category.html">
-                    <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
-                         alt="Food Name" />
-                    <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-grid-gutter">
-                <a class="card border-0 shadow" href="food-delivery-category.html">
-                    <img class="card-img-top"
-                         src="{% static 'assests/menu.jpg' %}"
-                         alt="Food Name" />
-                    <div class="card-body py-4 text-center">
-                        <h3 class="h5 mt-1">Food Name</h3>
-                    </div>
-                </a>
-            </div>
+          {% endfor %}
         </div>
+      
     </div>
+
 {% endblock content %}
