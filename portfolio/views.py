@@ -12,7 +12,23 @@ def experience(request):
 
 
 def certification(request):
-    return render(request, "certification.html")
+    certifications = [{
+        'title': 'Certificate in Computer Networking',
+        'Source': 'Shiv-India Institute of Management and Technology'
+    },
+        {
+        'title': 'Building Web Applications with Django and Postgres',
+        'Source': 'Udemy'
+    },
+        {
+        'title': 'Django Rest Framework For Absolute Beginners',
+        'Source': 'Udemy'
+    },
+        {
+        'title': 'Computer Vision Fundamentals',
+        'Source': 'Udemy'
+    }]
+    return render(request, "certification.html", {'certifications': certifications})
 
 
 def contact(request):
