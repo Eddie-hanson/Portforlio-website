@@ -20,4 +20,16 @@ def contact(request):
 
 
 def projects(request):
-    return render(request, "projects.html")
+    project_show = [
+        {'title': 'University Of Ghana Computer Science Webpage Mockup',
+         'image': 'assests/UG.png'},
+        {'title': 'Snake Game with python and......',
+         'image': 'assests/snake.png'},
+        {'title': 'Ecommerce website',
+         'image': 'assests/ecom.png'},
+        {'title': 'Rest API ',
+         'image': 'assests/REST.png'},
+        {'title': 'ISS TRACKER',
+         'image': 'assests/iss.png'},
+    ]
+    return render(request, "projects.html", {"projects": project_show})
