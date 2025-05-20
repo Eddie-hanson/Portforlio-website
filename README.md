@@ -37,8 +37,16 @@ This portfolio was created as part of a Django refresher course, since it’s be
 ## 4.   Start the development server
         python manage.py runserver
 
-
+## Screenshots
 
   ![image](https://github.com/user-attachments/assets/0107e39f-428c-4708-b09d-13c95ea3171e)
   ![image](https://github.com/user-attachments/assets/f75f271f-e60a-4c26-8bc4-2f0c4b505a6d)
+  ![image](https://github.com/user-attachments/assets/43ac9c5a-36d2-45a1-9747-58f834be2cbd)
+  ![image](https://github.com/user-attachments/assets/b823f996-7d31-48eb-9aca-7cf272e8ecfa)
+  ![image](https://github.com/user-attachments/assets/92ae9511-bc8c-42ad-9155-5392d1a428c2)
+  ![image](https://github.com/user-attachments/assets/3e4a2b04-eeb5-41f1-8452-bf54a7aac907)
+
+
+
+
 
