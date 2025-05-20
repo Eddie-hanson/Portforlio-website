@@ -87,7 +87,6 @@
           <div class="cta d-block d-md-flex align-items-center px-5">
             <div>
               <h2 class="mb-0">Ready for a Collaboration !!!</h2>
-              {% comment %} <h3 class="text-dark">Let's get started!</h3> {% endcomment %}
             </div>
             <div class="ml-auto">
               <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact me</a>
@@ -100,34 +99,20 @@
               
             </div>
             <div class="col-sm">
-              <h3>Customers</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Buyer</a></li>
-                <li><a href="#">Supplier</a></li>
-              </ul>
-            </div>
-            <div class="col-sm">
               <h3>Company</h3>
               <ul class="list-unstyled links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="{% url "certification" %}">Certifications </a></li>
+                <li><a href="{% url "projects" %}">projects</a></li>
+                <li><a href="{% url "contact" %}">Contact me</a></li>
               </ul>
             </div>
-            {% comment %} <div class="col-sm">
-              <h3>Further Information</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div> {% endcomment %}
+         
             <div class="col-md-3">
-              <h3>Follow us</h3>
+              <h3>Follow me</h3>
               <ul class="list-unstyled social">
                 <li><a href="#"><span class="icon-facebook"></span></a></li>
                 <li><a href="#"><span class="icon-twitter"></span></a></li>
                 <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-medium"></span></a></li>
                 <li><a href="#"><span class="icon-paper-plane"></span></a></li>
               </ul>
             </div>
